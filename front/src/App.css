@@ -1,0 +1,597 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*NAVBAR*/
+a {
+  text-decoration: none;
+  color: rgb(204, 204, 204);
+}
+
+.nav__link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav__item {
+  list-style: none;
+
+  padding: 10px;
+  padding-top: 21px;
+}
+.nav__link:hover {
+  color: #f9b401;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 12vh;
+  background: rgb(31, 34, 31);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav__brand {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: x-large;
+}
+
+.nav__brand:hover {
+  color: #f9b401;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+}
+.nav__toggler {
+  display: none;
+}
+.nav__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: rgb(204, 204, 204);
+  transition: 0.3s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    height: 93vh;
+    width: 50vw;
+    background: rgb(31, 34, 31);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+}
+
+.nav__active {
+  transform: translateX(0%);
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
+}
+
+/*BANNER*/
+.fondo {
+  display: flex;
+}
+.fondo1 {
+  width: 100%;
+  height: 70vh;
+  margin-top: 79px;
+}
+/*TITLE*/
+.title1 {
+  background-color: rgb(255, 255, 255);
+}
+.estructuras {
+  scroll-margin-top: 65px;
+  margin: 0px;
+  padding: 78px;
+  text-align: center;
+  font-size: x-large;
+  color: #324f81;
+}
+
+.estructuras h1 {
+  font-weight: 700;
+}
+
+.fabricacion {
+  font-size: x-large;
+  margin: 12px;
+}
+
+.fabricacion h3 {
+  font-weight: 650;
+}
+
+/***************CARDS******************/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;
+  align-items: center;*/
+  flex-wrap: wrap;
+}
+.imagen {
+  width: 100%;
+  height: 50vh;
+}
+
+.caja1 {
+  height: 60vh;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+}
+
+.caja2 {
+  height: 60vh;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  text-align: justify;
+}
+
+.caja2 h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #324f81;
+}
+.caja2 p {
+  padding: 20px;
+
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.btn-0 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bet {
+  color: white;
+  text-decoration: none;
+}
+.btn-1 {
+  width: 200px;
+  height: 6vh;
+  background: linear-gradient(90deg, #324f81, #a1a2ce);
+  cursor: pointer;
+  border-width: 1px 1px;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+
+.btn-1:hover {
+  background-color: #324f81;
+  box-shadow: 0 0 3px #324f81, 0 0 4px #324f81, 0 0 10px #324f81;
+}
+
+.caja3 {
+  height: 60vh;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  text-align: justify;
+}
+
+.caja3 h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #324f81;
+}
+
+.caja3 p {
+  padding: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.caja4 {
+  height: 60vh;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+.caja5 {
+  height: 60vh;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+}
+
+.caja6 {
+  height: 60vh;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  text-align: justify;
+}
+
+.caja6 h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #324f81;
+}
+.caja6 p {
+  padding: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+/**********footer*************/
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+
+  background-color: black;
+  height: 53vh;
+}
+
+.footer li {
+  list-style: none;
+}
+
+.footer2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+}
+
+.footer h1,
+ul {
+  color: white;
+}
+
+.logotipo {
+  width: 75%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+}
+
+.logg {
+  flex-basis: 25%;
+}
+
+.logg ul {
+  font-size: 20px;
+  padding-top: 20px;
+}
+.logg ul li {
+  padding: 6px;
+}
+
+.servicios {
+  flex-basis: 25%;
+  padding-top: 35px;
+}
+.servicios h1 {
+  text-align: left;
+  font-size: 30px;
+  padding-left: 40px;
+  padding-bottom: 13px;
+  color: #f9b401;
+}
+.servicios ul li {
+  text-align: left;
+  padding: 6px;
+}
+
+.direccion {
+  flex-basis: 25%;
+  padding-top: 35px;
+}
+
+.direccion h1 {
+  text-align: left;
+  font-size: 30px;
+  padding-left: 40px;
+  padding-bottom: 13px;
+  color: #f9b401;
+}
+.direccion ul li {
+  text-align: left;
+  padding: 7px;
+}
+
+.redes {
+  flex-basis: 25%;
+  padding-top: 35px;
+}
+
+.redes h1 {
+  text-align: left;
+  font-size: 30px;
+  padding-left: 35px;
+  padding-bottom: 13px;
+  color: #f9b401;
+}
+.redes ul li {
+  text-align: left;
+  padding: 3px;
+}
+/*MEDIA query BANNER*/
+@media screen and (max-width: 768px) {
+  .fondo {
+    padding-top: 75px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .caja2 {
+    padding-bottom: 40px;
+    margin-top: -4px;
+  }
+
+  .caja3 {
+    order: 4;
+    padding-bottom: 40px;
+    margin-top: -30px;
+  }
+  .caja4 {
+    order: 3;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  .caja5 {
+    order: 5;
+  }
+
+  .caja6 {
+    order: 6;
+    padding-bottom: 40px;
+    margin-top: -4px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 80vh;
+  }
+
+  .logg {
+    flex-basis: 50%;
+  }
+
+  .servicios {
+    flex-basis: 50%;
+  }
+  .direccion {
+    flex-basis: 50%;
+  }
+  .redes {
+    flex-basis: 50%;
+  }
+
+  .redes h1 {
+    padding-left: 42px;
+  }
+}
+
+/*SERVICIOS*/
+
+/*TOLVAENCAPSULADA*/
+.tolvaencapsulada1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 140px;
+}
+.proforma {
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: x-large;
+  padding-top: 40px;
+  margin-bottom: -25px;
+}
+.proforma h1 {
+  color: black;
+  text-decoration: underline black;
+}
+
+/*TOLVAENCAPSULADA_FORMULARIO*/
+.formulario0 {
+  padding-bottom: 50px;
+}
+.formulario {
+  border: 1px solid #000;
+  background-color: aliceblue;
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Estilos para la clase "columnas" */
+.columnas {
+  display: flex;
+  flex-direction: row; /* Por defecto, las columnas estarán una al lado de la otra en pantallas más grandes */
+  margin: 20px 0; /* Espacio vertical alrededor de las columnas (ajusta según tus necesidades) */
+}
+
+/* Estilos para la clase "columna" */
+.columna {
+  flex: 1; /* Hace que cada columna ocupe la mitad del ancho disponible */
+  margin-right: 20px; /* Espacio entre las columnas (ajusta según tus necesidades) */
+  padding: 20px; /* Espacio interno dentro de cada columna (ajusta según tus necesidades) */
+}
+
+/* Estilos para los campos dentro de las columnas */
+.campo {
+  margin-bottom: 15px; /* Espacio vertical entre campos (ajusta según tus necesidades) */
+}
+
+/* Estilos para las etiquetas (labels) */
+label {
+  font-size: 16px; /* Tamaño de letra para las etiquetas */
+  display: block; /* Para que las etiquetas estén en una línea nueva */
+  margin-bottom: 5px; /* Espacio vertical entre etiquetas (ajusta según tus necesidades) */
+}
+
+/* Estilos para los elementos de entrada (input y select) */
+input[type="text"],
+select {
+  width: 100%; /* Ocupar todo el ancho disponible en su contenedor */
+  padding: 10px; /* Espaciado interno en los elementos de entrada (ajusta según tus necesidades) */
+  font-size: 14px; /* Tamaño de letra para los elementos de entrada (ajusta según tus necesidades) */
+  border: 1px solid #ccc; /* Borde alrededor de los elementos de entrada (ajusta según tus necesidades) */
+  border-radius: 5px; /* Borde redondeado para los elementos de entrada (ajusta según tus necesidades) */
+}
+
+.subtitle__form {
+  padding-left: 17px;
+}
+/* Estilos para los botones */
+.btn-1 {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-1:hover {
+  background-color: #0056b3;
+}
+
+.btn-05 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/*pdf*/
+
+@media screen and (max-width: 768px) {
+  .tolvaencapsulada1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*TOLVA SEMIRROQUERA*/
+.tolvasemirroquera1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 140px;
+}
+
+@media screen and (max-width: 768px) {
+  .tolvasemirroquera1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*CONTACTOS*/
+
+.fondo2 {
+  width: 100%;
+  height: 60vh;
+  padding-top: 79px;
+}
+.titlecontact {
+  display: flex;
+  text-align: center;
+  padding: 30px;
+}
+.titlecontact h1 {
+  width: 100%;
+}
+
+/* Estilo para la sección de información de contacto */
+/* Estilo para la sección de información de contacto */
+.contact-container {
+  padding: 20px;
+  border-radius: 10px;
+
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto; /* Centra horizontalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+}
+
+/* Estilo para el encabezado */
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.contact-icon {
+  margin-bottom: 21px;
+}
+
+/* Estilo para el párrafo de descripción */
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Estilo para la lista de información de contacto */
+.contact-info .contact-details {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.contact-info .contact-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  fill: #f9b401; /* Cambia el color del ícono aquí */
+}
+
+.contact-info .contact-item p {
+  font-size: 18px;
+  color: #444;
+}
+
+.logotiponavbar {
+  width: 175px;
+  padding: 0;
+  margin: 0;
+}
