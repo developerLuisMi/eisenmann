@@ -4,7 +4,7 @@ const Title = () => {
       <div className="estructuras" id="services">
         <h1>Estructuras Metalicas</h1>
         <div className="fabricacion">
-          <h3>Fabricacion y reparacion de carrocerias</h3>
+          <h3>Fabricacion y reparacion de carrocerias con git</h3>
         </div>
       </div>
     </div>

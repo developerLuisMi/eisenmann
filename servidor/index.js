@@ -23,6 +23,26 @@ const db = mysql.createConnection({
   user: "root",
   password: "",
   database: "bdprueba2",
+
+  authSwitchHandler: function ({ pluginName, pluginData }, cb) {
+    if (pluginName === "caching_sha2_password") {
+      // Cambiar a 'mysql_native_password' si es necesario
+      return cb(null, Buffer.from("mysql_native_password"));
+    }
+    return cb(new Error("Unsupported auth plugin"));
+  },
+});
+
+db.connect((err) => {
+  if (err) {
+    console.error("Error al conectar a la base de datos:", err);
+    return;
+  }
+  console.log("Conexión exitosa a la base de datos MySQL");
+});
+
+db.on("error", (err) => {
+  console.error("Error en la conexión a la base de datos:", err);
 });
 
 const transporter = nodemailer.createTransport({
