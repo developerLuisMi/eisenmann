@@ -9,7 +9,7 @@ function BuscadorCliente({ onSearchResult }) {
   const handleSearch = async () => {
     try {
       // Realizar una solicitud GET al servidor Node para buscar clientes por DNI
-      const response = await axios.get(`http://localhost:3001/cliente/${dni}`);
+      const response = await axios.get(`http://www.eisenmannarequipa.com/cliente/${dni}`);
       // Actualizar el estado con los resultados de la búsqueda
       setSearchResults(response.data);
       // Llama a la función proporcionada por el componente padre con los resultados de la búsqueda

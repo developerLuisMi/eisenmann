@@ -1,28 +1,68 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
-app.listen(3001, () => {
-  console.log("servidor corriendo");
-});
+app.use(express.json());
+//app.use(cors());
+//agregado despues de pruebas
+app.use(cors({
+ origin: 'http://www.eisenmannarequipa.com',
+ methods: ['GET', 'POST'],
+ allowedHeaders: ['Content-Type']
+}));
 
-app.get("/", function (req, res) {
-  res.send("probando para segundo desplegue con new proyect con VITE");
-});
+//app.listen(3001, () => {
+  //console.log("servidor corriendo");
+//});
+
+
+//app.get("/", function (req, res) {
+  //res.send("ESTO ES PARA LA YANETH MONGOLITA");
+//});
 
 const fs = require("fs");
 const PDFDocument = require("pdfkit");
 const nodemailer = require("nodemailer");
 const mysql = require("mysql");
-const cors = require("cors");
 
-app.use(cors());
-app.use(express.json());
+
+// Configuración de CORS AGREGADO DESDE EL SERVIDOR LINUX
+//const corsOptions = {
+//  origin: 'https://www.eisenmannarequipa.com',  // Reemplaza con la URL de tu frontend en producción
+//  credentials: true,  // Habilita el envío de cookies de autenticación
+//};
+
+//app.use(cors(corsOptions));
 
 const db = mysql.createConnection({
   host: "localhost",
-  user: "root",
-  password: "",
-  database: "bdprueba2",
+  user: "luismiguel",
+  password: "Liberados753+",
+  database: "bdeisenmann",
+
+  authSwitchHandler: function ({ pluginName, pluginData }, cb) {
+    if (pluginName === 'caching_sha2_password') {
+      // Cambiar a 'mysql_native_password' si es necesario
+      return cb(null, Buffer.from('mysql_native_password'));
+    }
+    return cb(new Error('Unsupported auth plugin'));
+  },
+
+});
+
+db.connect((err) => {
+  if (err) {
+    console.error("Error al conectar a la base de datos:", err);
+    return;
+  }
+  console.log("Conexión exitosa a la base de datos MySQL");
+
+  
+});
+
+
+db.on("error", (err) => {
+  console.error("Error en la conexión a la base de datos:", err);
 });
 
 const transporter = nodemailer.createTransport({
@@ -420,4 +460,9 @@ app.get("/clientes/all", (req, res) => {
       }
     }
   );
+});
+
+
+app.listen(3001, () => {
+  console.log("servidor corriendo");
 });

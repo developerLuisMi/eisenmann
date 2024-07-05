@@ -9,7 +9,7 @@ function Login({ onAuthenticationSuccess }) {
   const handleLogin = async () => {
     // Realiza una solicitud al servidor para autenticar al usuario
     try {
-      const response = await fetch("http://localhost:3001/login", {
+      const response = await fetch("http://www.eisenmannarequipa.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ function Login({ onAuthenticationSuccess }) {
     <div className="containeringresar">
       <form>
         <div>
-          <label>Usuario:</label>
+          <label>Usuario perdido:</label>
           <input
             type="text"
             placeholder="username"

@@ -11,7 +11,7 @@ function Historialp() {
   useEffect(() => {
     // Realiza una solicitud GET al servidor para obtener los datos
     axios
-      .get("http://localhost:3001/clientes/all")
+      .get("http://www.eisenmannarequipa.com/clientes/all")
       .then((response) => {
         console.log("Datos recuperados:", response.data);
         setDatos(response.data);

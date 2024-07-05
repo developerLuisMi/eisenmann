@@ -13,7 +13,7 @@ function Buscadorformp({ onSearchSuccess }) {
     e.preventDefault();
 
     // Realiza una solicitud GET al servidor para buscar al cliente por DNI
-    Axios.get(`http://localhost:3001/buscar-cliente?dni=${searchTerm}`)
+    Axios.get(`http://www.eisenmannarequipa.com/buscar-cliente?dni=${searchTerm}`)
       .then((response) => {
         // Supongamos que response.data contiene los datos del cliente encontrado
         const cliente = response.data;

@@ -13,7 +13,7 @@ function Buscar() {
   const handleSearch = async () => {
     try {
       // Realiza una solicitud GET al servidor para buscar clientes por DNI
-      const response = await axios.get(`http://localhost:3001/cliente/${dni}`);
+      const response = await axios.get(`http://www.eisenmannarequipa.com/cliente/${dni}`);
       setSearchResults(response.data);
     } catch (error) {
       console.error("Error al obtener los datos:", error);

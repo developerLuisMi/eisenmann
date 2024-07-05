@@ -39,7 +39,7 @@ const Proformap = () => {
 
   const add = () => {
     // Realiza la solicitud POST para insertar datos en la tabla 'cliente'
-    Axios.post("http://localhost:3001/proforma2", {
+    Axios.post("http://www.eisenmannarequipa.com/proforma2", {
       nombre_2: nombre_2,
       dni_2: dni_2,
       gmail_2: gmail_2,

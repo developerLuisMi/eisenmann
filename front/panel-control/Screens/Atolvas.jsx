@@ -9,7 +9,7 @@ function Atolvas() {
   useEffect(() => {
     // Realiza una solicitud GET al servidor para obtener los datos
     axios
-      .get("http://localhost:3001/proforma2/all")
+      .get("http://www.eisenmannarequipa.com/proforma2/all")
       .then((response) => setData(response.data))
       .catch((error) => console.error("Error al obtener los datos:", error));
   }, []);

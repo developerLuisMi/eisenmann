@@ -162,7 +162,7 @@ const Formulario = ({ onSubmit }) => {
 
   const add = () => {
     // Realiza la solicitud POST para insertar datos en la tabla 'cliente'
-    Axios.post("http://localhost:3001/cliente", {
+    Axios.post("http://www.eisenmannarequipa.com/cliente", {
       nombre: nombre,
       dni: dni,
       gmail: gmail,
